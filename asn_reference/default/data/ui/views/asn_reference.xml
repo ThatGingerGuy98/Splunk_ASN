@@ -1,0 +1,25 @@
+<form version="1.1" theme="light">
+  <label>ASN Reference</label>
+  <description>WhoIs Dashboard</description>
+  <fieldset submitButton="true">
+    <input type="text" token="UserIP">
+      <label>Address to Lookup</label>
+    </input>
+  </fieldset>
+  <row>
+    <panel>
+      <table>
+        <title>Information</title>
+        <search>
+          <query>| makeresults 
+| eval UserIP = "$UserIP$"
+| lookup asn_reference Range AS UserIP OUTPUT Owner 
+| table UserIP Owner</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="drilldown">none</option>
+      </table>
+    </panel>
+  </row>
+</form>
