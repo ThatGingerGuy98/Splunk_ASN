@@ -1,35 +1,31 @@
+[app/ui]
+version = 9.4.1
+modtime = 1742419266.314491200
 
-# Application-level permissions
+[app/launcher]
+version = 9.4.1
+modtime = 1742419266.325491500
 
-[]
-access = read : [ * ], write : [ admin, power ]
+[nav/default]
+version = 9.4.1
+modtime = 1742090091.555425800
 
-### EVENT TYPES
-
-[eventtypes]
+[transforms/asn_reference]
+access = read : [ * ]
 export = system
+version = 9.4.1
+modtime = 1742402171.119460000
 
-
-### PROPS
-
-[props]
+[lookups/asnAllNets.csv]
+access = read : [ * ]
 export = system
+version = 9.4.1
+modtime = 1742092934.634741600
 
+[views/asn_reference]
+version = 9.4.1
+modtime = 1742418813.108759900
 
-### TRANSFORMS
-
-[transforms]
-export = system
-
-
-### LOOKUPS
-
-[lookups]
-export = system
-
-
-### VIEWSTATES: even normal users should be able to create shared viewstates
-
-[viewstates]
-access = read : [ * ], write : [ * ]
-export = system
+[app/package/check_for_updates]
+version = 9.4.1
+modtime = 1742419266.335490100
